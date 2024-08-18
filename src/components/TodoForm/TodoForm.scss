@@ -1,0 +1,85 @@
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+
+
+
+    .todo__form {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        animation: fadeIn 1s ease-in-out;
+
+
+        input {
+            font-size: 20px;
+            border-radius: 10px;
+            height: 40px;
+            padding: 0 10px;
+            animation: slideInLeft 1s ease-out;
+
+
+        }
+
+        button {
+            font-size: 20px;
+            border-radius: 10px;
+            height: 40px;
+            background-color: gray;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: slideInRight 1s ease-out;
+
+
+
+
+            &:hover {
+                background-color: lightgray;
+                color: black;
+
+
+            }
+        }
+    }
+}
